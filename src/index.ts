@@ -12,7 +12,7 @@ const httpServer = new http.Server(app);
 
 const socketIO = require('socket.io')(httpServer, {
   cors: {
-    origin: 'https://rosttrukhum.github.io/OpenChatFE/',
+    origin: '*',
   },
 });
 
