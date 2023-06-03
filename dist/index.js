@@ -35,7 +35,7 @@ app.use((0, cors_1.default)());
 const httpServer = new http.Server(app);
 const socketIO = require('socket.io')(httpServer, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'https://rosttrukhum.github.io/OpenChatFE/',
     },
 });
 let users = [];
@@ -60,5 +60,5 @@ app.get('/', (req, res) => {
     res.send('Hello, this is Express');
 });
 httpServer.listen(port, () => {
-    console.log(`[Server]: I am running at https://localhost:${port}`);
+    console.log(`[Server]: I am running at ${port}`);
 });

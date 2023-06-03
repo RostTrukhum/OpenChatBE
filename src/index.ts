@@ -12,7 +12,7 @@ const httpServer = new http.Server(app);
 
 const socketIO = require('socket.io')(httpServer, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: 'https://rosttrukhum.github.io/OpenChatFE/',
   },
 });
 
@@ -47,5 +47,5 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 httpServer.listen(port, () => {
-  console.log(`[Server]: I am running at https://localhost:${port}`);
+  console.log(`[Server]: I am running at ${port}`);
 });
